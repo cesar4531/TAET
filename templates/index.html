@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<head>
+  <title>Ia Taet</title>
+  <link
+    rel="shortcut icon"
+    href="{{ url_for('static', filename='TAET.png') }}"
+  />
+  <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}" />
+</head>
+
+<body>
+  <img src="{{ url_for('static', filename='TAET.png') }}" class="icon" />
+  <h3>IA Taet</h3>
+  <form action="/" method="post">
+    <input type="text" name="animal" placeholder="Preguntas" required />
+    <input type="submit" value="Enter" />
+  </form>
+  {% if result %}
+  <div class="result">{{ result }}</div>
+  {% endif %}
+</body>
